@@ -23,12 +23,15 @@ namespace Whatspam
         //Declaring chromedriver setup variables
         IWebDriver driver;
         ChromeDriverService driverService;
-        //Default error message when targets aren't found
-        string NOT_FOUND = "Contatto non trovato";
+
+        string insertNameText;
+        string insertMessageText;
+        string targetNotFoundText;
 
         public Whatspam()
         {
             InitializeComponent();
+            
         }
 
         #region SPAMMING
@@ -73,6 +76,7 @@ namespace Whatspam
                     {
                         //Closes the browser
                         driver.Quit();
+                        browserOpen = false;
                         breakOut = true;
                         restTime.Stop();
                         break;
@@ -107,7 +111,7 @@ namespace Whatspam
                         //If the target couldn't be found it minimizes the browser window and shows an error message
                         driver.Manage().Window.Minimize();
 
-                        nameInput.Text = NOT_FOUND;
+                        nameInput.Text = targetNotFoundText;
                         nameInput.ForeColor = Color.Red;
                     }  
                 }
@@ -143,8 +147,39 @@ namespace Whatspam
         {
             if (browserOpen)
             {
+                browserOpen = false;
                 driver.Quit();
             }          
+        }
+        #endregion
+
+        #region LANGUAGE
+        private void languageItalian(object sender, EventArgs e)
+        {
+            insertNameText = "Scrivi il nome del contatto";
+            insertMessageText = "Scrivi il messaggio";
+            targetNotFoundText = "Contatto non trovato";
+            nameInput.Text = insertNameText;
+            messageInput.Text = insertMessageText;
+            nameLabel.Text = "Obiettivo";
+            messageLabel.Text = "Messaggio";
+            numberLabel.Text = "Numero messaggi";
+            italianButton.BackColor = Color.Gray;
+            englishButton.BackColor = Color.Gainsboro;
+        }
+
+        private void languageEnglish(object sender, EventArgs e)
+        {
+            insertNameText = "Write the target name";
+            insertMessageText = "Write the message";
+            targetNotFoundText = "Target not found";
+            nameInput.Text = insertNameText;
+            messageInput.Text = insertMessageText;
+            nameLabel.Text = "Target";
+            messageLabel.Text = "Message";
+            numberLabel.Text = "Spams number";
+            englishButton.BackColor = Color.Gray;
+            italianButton.BackColor = Color.Gainsboro;
         }
         #endregion
 
@@ -152,7 +187,7 @@ namespace Whatspam
         //Default text vanishes when something is written in the name form
         private void nameInput_KeyDown(object sender, KeyEventArgs e)
         {
-            if (nameInput.Text == "Scrivi il nome del contatto" || nameInput.Text == NOT_FOUND)
+            if (nameInput.Text == "Scrivi il nome del contatto" || nameInput.Text == targetNotFoundText)
             {
                 nameInput.Text = "";
                 nameInput.ForeColor = Color.YellowGreen;
@@ -161,7 +196,7 @@ namespace Whatspam
         //Default text vanishes when the name form is clicked
         private void nameInput_Click(object sender, EventArgs e)
         {
-            if (nameInput.Text == "Scrivi il nome del contatto" || nameInput.Text == NOT_FOUND)
+            if (nameInput.Text == "Scrivi il nome del contatto" || nameInput.Text == targetNotFoundText)
             {
                 nameInput.Text = "";
                 nameInput.ForeColor = Color.YellowGreen;
