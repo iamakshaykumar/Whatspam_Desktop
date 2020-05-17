@@ -30,7 +30,8 @@ namespace Whatspam
         {
             InitializeComponent();
         }
-        
+
+        #region SPAMMING
         //When the confirm button gets clicked
         private void confirmButton_Click(object sender, EventArgs e)
         {
@@ -145,9 +146,10 @@ namespace Whatspam
                 driver.Quit();
             }          
         }
-        
+        #endregion
 
         #region DEFAULT TEXT
+        //Default text vanishes when something is written in the name form
         private void nameInput_KeyDown(object sender, KeyEventArgs e)
         {
             if (nameInput.Text == "Scrivi il nome del contatto" || nameInput.Text == NOT_FOUND)
@@ -156,16 +158,16 @@ namespace Whatspam
                 nameInput.ForeColor = Color.YellowGreen;
             }
         }
-
-        private void messageInput_KeyDown(object sender, KeyEventArgs e)
+        //Default text vanishes when the name form is clicked
+        private void nameInput_Click(object sender, EventArgs e)
         {
-            if (messageInput.Text == "Scrivi il messaggio")
+            if (nameInput.Text == "Scrivi il nome del contatto" || nameInput.Text == NOT_FOUND)
             {
-                messageInput.Text = "";
-                messageInput.ForeColor = Color.YellowGreen;
-            }          
+                nameInput.Text = "";
+                nameInput.ForeColor = Color.YellowGreen;
+            }
         }
-
+        //If the name form is left empty the default text gets displayed
         private void nameInput_Leave(object sender, EventArgs e)
         {
             if (nameInput.Text == "")
@@ -174,7 +176,25 @@ namespace Whatspam
                 nameInput.ForeColor = Color.OliveDrab;
             }
         }
-
+        //Default text vanishes when something is written in the message form
+        private void messageInput_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (messageInput.Text == "Scrivi il messaggio")
+            {
+                messageInput.Text = "";
+                messageInput.ForeColor = Color.YellowGreen;
+            }          
+        }
+        //Deafult text vanishes when the message form is clicked
+        private void messageInput_Click(object sender, EventArgs e)
+        {
+            if (messageInput.Text == "Scrivi il messaggio")
+            {
+                messageInput.Text = "";
+                messageInput.ForeColor = Color.YellowGreen;
+            }
+        }
+        //If the message form is left empty the default text gets displayed
         private void messageInput_Leave(object sender, EventArgs e)
         {
             if (messageInput.Text == "")
@@ -231,6 +251,9 @@ namespace Whatspam
             }
             return false;
         }
+
         #endregion
+
+        
     }
 }

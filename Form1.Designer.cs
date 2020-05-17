@@ -44,13 +44,14 @@
             // 
             this.nameLabel.AutoSize = true;
             this.nameLabel.BackColor = System.Drawing.SystemColors.Desktop;
-            this.nameLabel.Font = new System.Drawing.Font("HACKED", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel.ForeColor = System.Drawing.Color.YellowGreen;
-            this.nameLabel.Location = new System.Drawing.Point(11, 9);
+            this.nameLabel.Location = new System.Drawing.Point(22, 17);
+            this.nameLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(134, 35);
+            this.nameLabel.Size = new System.Drawing.Size(291, 75);
             this.nameLabel.TabIndex = 0;
-            this.nameLabel.Text = "obiettivo";
+            this.nameLabel.Text = "Obiettivo";
             this.nameLabel.MouseEnter += new System.EventHandler(this.nameLabel_MouseEnter);
             this.nameLabel.MouseLeave += new System.EventHandler(this.nameLabel_MouseLeave);
             // 
@@ -58,13 +59,15 @@
             // 
             this.nameInput.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.nameInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nameInput.Font = new System.Drawing.Font("DEC Terminal Modern", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameInput.ForeColor = System.Drawing.Color.OliveDrab;
-            this.nameInput.Location = new System.Drawing.Point(17, 65);
+            this.nameInput.Location = new System.Drawing.Point(34, 126);
+            this.nameInput.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.nameInput.Name = "nameInput";
-            this.nameInput.Size = new System.Drawing.Size(384, 42);
+            this.nameInput.Size = new System.Drawing.Size(766, 75);
             this.nameInput.TabIndex = 1;
             this.nameInput.Text = "Scrivi il nome del contatto";
+            this.nameInput.Click += new System.EventHandler(this.nameInput_Click);
             this.nameInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nameInput_KeyDown);
             this.nameInput.Leave += new System.EventHandler(this.nameInput_Leave);
             // 
@@ -72,11 +75,12 @@
             // 
             this.messageLabel.AutoSize = true;
             this.messageLabel.BackColor = System.Drawing.SystemColors.Desktop;
-            this.messageLabel.Font = new System.Drawing.Font("HACKED", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.messageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.messageLabel.ForeColor = System.Drawing.Color.YellowGreen;
-            this.messageLabel.Location = new System.Drawing.Point(11, 150);
+            this.messageLabel.Location = new System.Drawing.Point(22, 291);
+            this.messageLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.messageLabel.Name = "messageLabel";
-            this.messageLabel.Size = new System.Drawing.Size(158, 35);
+            this.messageLabel.Size = new System.Drawing.Size(352, 75);
             this.messageLabel.TabIndex = 2;
             this.messageLabel.Text = "Messaggio";
             this.messageLabel.MouseEnter += new System.EventHandler(this.messageLabel_MouseEnter);
@@ -86,13 +90,15 @@
             // 
             this.messageInput.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.messageInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.messageInput.Font = new System.Drawing.Font("DEC Terminal Modern", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.messageInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.messageInput.ForeColor = System.Drawing.Color.OliveDrab;
-            this.messageInput.Location = new System.Drawing.Point(17, 202);
+            this.messageInput.Location = new System.Drawing.Point(34, 391);
+            this.messageInput.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.messageInput.Name = "messageInput";
-            this.messageInput.Size = new System.Drawing.Size(361, 42);
+            this.messageInput.Size = new System.Drawing.Size(720, 75);
             this.messageInput.TabIndex = 3;
             this.messageInput.Text = "Scrivi il messaggio";
+            this.messageInput.Click += new System.EventHandler(this.messageInput_Click);
             this.messageInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.messageInput_KeyDown);
             this.messageInput.Leave += new System.EventHandler(this.messageInput_Leave);
             // 
@@ -100,13 +106,14 @@
             // 
             this.numberLabel.AutoSize = true;
             this.numberLabel.BackColor = System.Drawing.SystemColors.Desktop;
-            this.numberLabel.Font = new System.Drawing.Font("HACKED", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numberLabel.ForeColor = System.Drawing.Color.YellowGreen;
-            this.numberLabel.Location = new System.Drawing.Point(11, 292);
+            this.numberLabel.Location = new System.Drawing.Point(22, 566);
+            this.numberLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.numberLabel.Name = "numberLabel";
-            this.numberLabel.Size = new System.Drawing.Size(247, 35);
+            this.numberLabel.Size = new System.Drawing.Size(569, 75);
             this.numberLabel.TabIndex = 4;
-            this.numberLabel.Text = "numero messaggi";
+            this.numberLabel.Text = "Numero messaggi";
             this.numberLabel.MouseEnter += new System.EventHandler(this.numberLabel_MouseEnter);
             this.numberLabel.MouseLeave += new System.EventHandler(this.numberLabel_MouseLeave);
             // 
@@ -115,9 +122,10 @@
             this.numberInput.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.numberInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numberInput.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.numberInput.Font = new System.Drawing.Font("Virtual DJ", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numberInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numberInput.ForeColor = System.Drawing.Color.YellowGreen;
-            this.numberInput.Location = new System.Drawing.Point(17, 345);
+            this.numberInput.Location = new System.Drawing.Point(35, 668);
+            this.numberInput.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.numberInput.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -129,7 +137,7 @@
             0,
             0});
             this.numberInput.Name = "numberInput";
-            this.numberInput.Size = new System.Drawing.Size(156, 36);
+            this.numberInput.Size = new System.Drawing.Size(312, 60);
             this.numberInput.TabIndex = 5;
             this.numberInput.Value = new decimal(new int[] {
             1,
@@ -139,9 +147,10 @@
             // 
             // confirmButton
             // 
-            this.confirmButton.Location = new System.Drawing.Point(584, 46);
+            this.confirmButton.Location = new System.Drawing.Point(1168, 89);
+            this.confirmButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.confirmButton.Name = "confirmButton";
-            this.confirmButton.Size = new System.Drawing.Size(347, 367);
+            this.confirmButton.Size = new System.Drawing.Size(694, 711);
             this.confirmButton.TabIndex = 6;
             this.confirmButton.UseVisualStyleBackColor = true;
             this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
@@ -149,18 +158,19 @@
             // progressBar
             // 
             this.progressBar.BackColor = System.Drawing.SystemColors.Desktop;
-            this.progressBar.Location = new System.Drawing.Point(17, 422);
+            this.progressBar.Location = new System.Drawing.Point(34, 818);
+            this.progressBar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(359, 23);
+            this.progressBar.Size = new System.Drawing.Size(718, 45);
             this.progressBar.TabIndex = 7;
             // 
             // Whatspam
             // 
             this.AcceptButton = this.confirmButton;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
-            this.ClientSize = new System.Drawing.Size(985, 473);
+            this.ClientSize = new System.Drawing.Size(1942, 837);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.confirmButton);
             this.Controls.Add(this.numberInput);
@@ -170,8 +180,9 @@
             this.Controls.Add(this.nameInput);
             this.Controls.Add(this.nameLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(1003, 520);
-            this.MinimumSize = new System.Drawing.Size(1003, 520);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.MaximumSize = new System.Drawing.Size(1974, 925);
+            this.MinimumSize = new System.Drawing.Size(1974, 925);
             this.Name = "Whatspam";
             this.Text = "Whatspam";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Whatspam_FormClosed);
