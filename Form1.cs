@@ -24,14 +24,13 @@ namespace Whatspam
         IWebDriver driver;
         ChromeDriverService driverService;
 
-        string insertNameText;
-        string insertMessageText;
-        string targetNotFoundText;
+        string insertNameText = "Write the target name";
+        string insertMessageText = "Write the message";
+        string targetNotFoundText = "Target not found";
 
         public Whatspam()
         {
             InitializeComponent();
-            
         }
 
         #region SPAMMING
@@ -187,7 +186,7 @@ namespace Whatspam
         //Default text vanishes when something is written in the name form
         private void nameInput_KeyDown(object sender, KeyEventArgs e)
         {
-            if (nameInput.Text == "Scrivi il nome del contatto" || nameInput.Text == targetNotFoundText)
+            if (nameInput.Text == insertNameText || nameInput.Text == targetNotFoundText)
             {
                 nameInput.Text = "";
                 nameInput.ForeColor = Color.YellowGreen;
@@ -196,7 +195,7 @@ namespace Whatspam
         //Default text vanishes when the name form is clicked
         private void nameInput_Click(object sender, EventArgs e)
         {
-            if (nameInput.Text == "Scrivi il nome del contatto" || nameInput.Text == targetNotFoundText)
+            if (nameInput.Text == insertNameText || nameInput.Text == targetNotFoundText)
             {
                 nameInput.Text = "";
                 nameInput.ForeColor = Color.YellowGreen;
@@ -207,14 +206,14 @@ namespace Whatspam
         {
             if (nameInput.Text == "")
             {
-                nameInput.Text = "Scrivi il nome del contatto";
+                nameInput.Text = insertNameText;
                 nameInput.ForeColor = Color.OliveDrab;
             }
         }
         //Default text vanishes when something is written in the message form
         private void messageInput_KeyDown(object sender, KeyEventArgs e)
         {
-            if (messageInput.Text == "Scrivi il messaggio")
+            if (messageInput.Text == insertMessageText)
             {
                 messageInput.Text = "";
                 messageInput.ForeColor = Color.YellowGreen;
@@ -223,7 +222,7 @@ namespace Whatspam
         //Deafult text vanishes when the message form is clicked
         private void messageInput_Click(object sender, EventArgs e)
         {
-            if (messageInput.Text == "Scrivi il messaggio")
+            if (messageInput.Text == insertMessageText)
             {
                 messageInput.Text = "";
                 messageInput.ForeColor = Color.YellowGreen;
@@ -234,7 +233,7 @@ namespace Whatspam
         {
             if (messageInput.Text == "")
             {
-                messageInput.Text = "Scrivi il messaggio";
+                messageInput.Text = insertMessageText;
                 messageInput.ForeColor = Color.OliveDrab;
             }
         }
@@ -287,8 +286,7 @@ namespace Whatspam
             return false;
         }
 
-        #endregion
 
-        
+        #endregion
     }
 }
