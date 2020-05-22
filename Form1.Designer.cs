@@ -50,7 +50,7 @@
             this.nameLabel.ForeColor = System.Drawing.Color.YellowGreen;
             this.nameLabel.Location = new System.Drawing.Point(12, 14);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(103, 35);
+            this.nameLabel.Size = new System.Drawing.Size(101, 35);
             this.nameLabel.TabIndex = 0;
             this.nameLabel.Text = "Target";
             this.nameLabel.MouseEnter += new System.EventHandler(this.nameLabel_MouseEnter);
@@ -79,7 +79,7 @@
             this.messageLabel.ForeColor = System.Drawing.Color.YellowGreen;
             this.messageLabel.Location = new System.Drawing.Point(11, 150);
             this.messageLabel.Name = "messageLabel";
-            this.messageLabel.Size = new System.Drawing.Size(134, 35);
+            this.messageLabel.Size = new System.Drawing.Size(132, 35);
             this.messageLabel.TabIndex = 2;
             this.messageLabel.Text = "Message";
             this.messageLabel.MouseEnter += new System.EventHandler(this.messageLabel_MouseEnter);
@@ -108,7 +108,7 @@
             this.numberLabel.ForeColor = System.Drawing.Color.YellowGreen;
             this.numberLabel.Location = new System.Drawing.Point(11, 292);
             this.numberLabel.Name = "numberLabel";
-            this.numberLabel.Size = new System.Drawing.Size(212, 35);
+            this.numberLabel.Size = new System.Drawing.Size(205, 35);
             this.numberLabel.TabIndex = 4;
             this.numberLabel.Text = "Spams number";
             this.numberLabel.MouseEnter += new System.EventHandler(this.numberLabel_MouseEnter);
@@ -143,17 +143,21 @@
             // 
             // confirmButton
             // 
-            this.confirmButton.Location = new System.Drawing.Point(650, 87);
+            this.confirmButton.BackColor = System.Drawing.Color.OliveDrab;
+            this.confirmButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.confirmButton.Font = new System.Drawing.Font("Arial", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmButton.Location = new System.Drawing.Point(619, 65);
             this.confirmButton.Name = "confirmButton";
-            this.confirmButton.Size = new System.Drawing.Size(313, 338);
+            this.confirmButton.Size = new System.Drawing.Size(320, 354);
             this.confirmButton.TabIndex = 6;
-            this.confirmButton.UseVisualStyleBackColor = true;
+            this.confirmButton.Text = "Send";
+            this.confirmButton.UseVisualStyleBackColor = false;
             this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
             // 
             // progressBar
             // 
             this.progressBar.BackColor = System.Drawing.SystemColors.Desktop;
-            this.progressBar.Location = new System.Drawing.Point(17, 422);
+            this.progressBar.Location = new System.Drawing.Point(17, 418);
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(359, 23);
             this.progressBar.TabIndex = 7;
@@ -164,7 +168,7 @@
             this.italianButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.italianButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.italianButton.Location = new System.Drawing.Point(909, 14);
-            this.italianButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.italianButton.Margin = new System.Windows.Forms.Padding(2);
             this.italianButton.Name = "italianButton";
             this.italianButton.Size = new System.Drawing.Size(54, 39);
             this.italianButton.TabIndex = 8;
@@ -179,7 +183,7 @@
             this.englishButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.englishButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.englishButton.Location = new System.Drawing.Point(851, 14);
-            this.englishButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.englishButton.Margin = new System.Windows.Forms.Padding(2);
             this.englishButton.Name = "englishButton";
             this.englishButton.Size = new System.Drawing.Size(54, 39);
             this.englishButton.TabIndex = 9;

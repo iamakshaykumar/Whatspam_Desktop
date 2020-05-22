@@ -23,7 +23,13 @@ namespace Whatspam
         //Declaring chromedriver setup variables
         IWebDriver driver;
         ChromeDriverService driverService;
-
+        //Bool that checks if there's a spamming process
+        bool spammingProcess = false;
+        //Bool that checks if it's actually spamming
+        bool spamming = false;
+        //Variable storing spam numbers
+        int spamNum;
+        //Default english texts
         string insertNameText = "Write the target name";
         string insertMessageText = "Write the message";
         string targetNotFoundText = "Target not found";
@@ -36,6 +42,30 @@ namespace Whatspam
         #region SPAMMING
         //When the confirm button gets clicked
         private void confirmButton_Click(object sender, EventArgs e)
+        {
+            //Checks if there's not an ongoing spamming process
+            if (!spammingProcess)
+            {
+                //Stores the content of spam numbers form
+                spamNum = (int)numberInput.Value;
+                //Resets progress bar value
+                progressBar.Value = 0;
+                //Sets a maximum for the progress bar
+                progressBar.Maximum = spamNum;
+                
+                //Starts the spamming process in a new thread
+                Thread spammingThread = new Thread(new ThreadStart(BeginSpamming));
+
+                spammingThread.Start();
+            }
+            else if (spamming)
+            {
+                confirmButton.BackColor = Color.OliveDrab;
+                spamming = false;
+            }
+        }
+
+        private void BeginSpamming()
         {
             IWebElement contact;
             bool breakOut = false;
@@ -56,8 +86,7 @@ namespace Whatspam
 
                 browserOpen = true;
             }
-            //Resets progress bar value
-            progressBar.Value = 0;
+            
             //Setting up a timer to give the user a limited amount of time to log in whatsapp
             restTime = new Stopwatch();
             restTime.Start();
@@ -92,7 +121,7 @@ namespace Whatspam
                     //Retrieves the target from recent chats and starts the spamming process
                     contact = driver.FindElement(By.XPath($"//span[@class='_1wjpf _3NFp9 _3FXB1' and @title='{targetName}']"));
 
-                    SpamTarget(contact);
+                    SpamTarget(contact, spamNum);
                 }
                 catch (NoSuchElementException)
                 {
@@ -101,44 +130,67 @@ namespace Whatspam
 
                     try
                     {
-                        contact = driver.FindElement(By.XPath($"//span[@class='_1wjpf _3NFp9 _3FXB1' and @title='{targetName}']"));
+                        restTime.Start();
+                        while (true)
+                        {
+                            try
+                            {
+                                driver.FindElement(By.XPath($"//span[@class='_1wjpf _3NFp9 _3FXB1' and @title='{targetName}']"));
+                                break;
+                            }
+                            catch (NoSuchElementException)
+                            {
+                                if (restTime.Elapsed.Seconds > 5)
+                                {
+                                    Debug.WriteLine("\n\nYEEE\n\n");
+                                    break;
+                                }
+                            }
+                        }
 
-                        SpamTarget(contact);
+                        restTime.Stop();
+
+                        contact = driver.FindElement(By.XPath($"//span[@class='_1wjpf _3NFp9 _3FXB1' and @title='{targetName}']"));
+                      
+                        SpamTarget(contact, spamNum);
                     }
                     catch (NoSuchElementException)
                     {
                         //If the target couldn't be found it minimizes the browser window and shows an error message
                         driver.Manage().Window.Minimize();
 
-                        nameInput.Text = targetNotFoundText;
-                        nameInput.ForeColor = Color.Red;
+                        displayTargetNotFound();
                     }  
                 }
             }           
         }
 
         //Spamming method
-        private void SpamTarget(IWebElement contact)
+        private void SpamTarget(IWebElement contact, int spamNum)
         {
             string message;
-            int spamNum;
             int i;
+
+            spamming = true;
+            //Shows the red button will now stop the process
+            mainButtonRed();
+
             //Opens the chat of the given target
             contact.Click();
             //Locates the message input space
             IWebElement textField = driver.FindElement(By.XPath("//div[@class='_2S1VP copyable-text selectable-text' and @data-tab='1']"));
             //Saves the message and the number of messages to be sent from user input
             message = messageInput.Text;
-            spamNum = (int)numberInput.Value;
-            //Sets a maximum for the progress bar
-            progressBar.Maximum = spamNum;
+       
             //Sends the same message n times
-            for (i = 0; i < spamNum; i++, progressBar.Value++)
+            for (i = 0; i < spamNum && spamming; i++)
             {
-                textField.SendKeys(message);
-
-                driver.FindElement(By.ClassName("_35EW6")).Click();
-            }           
+                //textField.SendKeys(message);
+                Thread.Sleep(1000);
+                //driver.FindElement(By.ClassName("_35EW6")).Click();
+                incrementProgressbar();
+            }
+            spamming = false;
         }
 
         //Closes the browser when the program is closed
@@ -161,7 +213,7 @@ namespace Whatspam
             nameInput.Text = insertNameText;
             messageInput.Text = insertMessageText;
             nameLabel.Text = "Obiettivo";
-            messageLabel.Text = "Messaggio";
+            messageLabel.Text = "Messaggio";      
             numberLabel.Text = "Numero messaggi";
             italianButton.BackColor = Color.Gray;
             englishButton.BackColor = Color.Gainsboro;
@@ -176,7 +228,7 @@ namespace Whatspam
             messageInput.Text = insertMessageText;
             nameLabel.Text = "Target";
             messageLabel.Text = "Message";
-            numberLabel.Text = "Spams number";
+            numberLabel.Text = "Spams number";    
             englishButton.BackColor = Color.Gray;
             italianButton.BackColor = Color.Gainsboro;
         }
@@ -285,8 +337,46 @@ namespace Whatspam
             }
             return false;
         }
+        #region CROSS-THREAD
+        private void incrementProgressbar()
+        {
+            if (InvokeRequired)
+            {
+                MethodInvoker method = new MethodInvoker(incrementProgressbar);
+                Invoke(method);
+                return;
+            }
+            progressBar.Value++;
+        }
 
+        private void displayTargetNotFound()
+        {
+            if (InvokeRequired)
+            {
+                MethodInvoker method = new MethodInvoker(displayTargetNotFound);
+                Invoke(method);
+                return;
+            }
+            nameInput.Text = targetNotFoundText;
+            nameInput.ForeColor = Color.Red;
+        }
 
+        //Changes button color, indicating it will now stop the process if clicked
+        private void mainButtonRed()
+        {
+            if (InvokeRequired)
+            {
+                MethodInvoker method = new MethodInvoker(mainButtonRed);
+                Invoke(method);
+                return;
+            }
+            confirmButton.BackColor = Color.Red;
+        }
+
+        
         #endregion
+        #endregion
+
+
     }
 }
