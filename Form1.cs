@@ -61,6 +61,7 @@ namespace Whatspam
             else if (spamming)
             {
                 confirmButton.BackColor = Color.OliveDrab;
+                confirmButton.Text = "Send";
                 spamming = false;
             }
         }
@@ -185,9 +186,9 @@ namespace Whatspam
             //Sends the same message n times
             for (i = 0; i < spamNum && spamming; i++)
             {
-                //textField.SendKeys(message);
-                Thread.Sleep(1000);
-                //driver.FindElement(By.ClassName("_35EW6")).Click();
+                textField.SendKeys(message);
+                //Thread.Sleep(1000);
+                driver.FindElement(By.ClassName("_35EW6")).Click();
                 incrementProgressbar();
             }
             spamming = false;
@@ -371,6 +372,7 @@ namespace Whatspam
                 return;
             }
             confirmButton.BackColor = Color.Red;
+            confirmButton.Text = "Stop";
         }
 
         
