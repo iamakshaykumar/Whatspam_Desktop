@@ -191,6 +191,7 @@ namespace Whatspam
                 driver.FindElement(By.ClassName("_35EW6")).Click();
                 incrementProgressbar();
             }
+            mainButtonGreen();
             spamming = false;
         }
 
@@ -373,6 +374,18 @@ namespace Whatspam
             }
             confirmButton.BackColor = Color.Red;
             confirmButton.Text = "Stop";
+        }
+
+        private void mainButtonGreen()
+        {
+            if (InvokeRequired)
+            {
+                MethodInvoker method = new MethodInvoker(mainButtonGreen);
+                Invoke(method);
+                return;
+            }
+            confirmButton.BackColor = Color.OliveDrab;
+            confirmButton.Text = "Send";
         }
 
         
