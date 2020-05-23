@@ -120,7 +120,8 @@ namespace Whatspam
                 try
                 {
                     //Retrieves the target from recent chats and starts the spamming process
-                    contact = driver.FindElement(By.XPath($"//span[@class='_1wjpf _3NFp9 _3FXB1' and @title='{targetName}']"));
+                    //contact = driver.FindElement(By.XPath($"//span[@class='_1wjpf _3NFp9 _3FXB1' and @title='{targetName}']"));
+                    contact = driver.FindElement(By.XPath($"//span[@class='_1wjpf _3NFp9 _3FXB1' and contains(@title, {targetName})]"));
 
                     SpamTarget(contact, spamNum);
                 }
@@ -131,29 +132,40 @@ namespace Whatspam
 
                     try
                     {
-                        restTime.Start();
-                        while (true)
+                        try
                         {
-                            try
+                            Thread.Sleep(1000);
+                            contact = driver.FindElement(By.XPath($"//span[@class='_1wjpf _3NFp9 _3FXB1' and contains(@title, {targetName})]"));
+                            SpamTarget(contact, spamNum);
+                        }
+                        catch(NoSuchElementException)
+                        {
+                            restTime.Start();
+                            while (true)
                             {
-                                driver.FindElement(By.XPath($"//span[@class='_1wjpf _3NFp9 _3FXB1' and @title='{targetName}']"));
-                                break;
-                            }
-                            catch (NoSuchElementException)
-                            {
-                                if (restTime.Elapsed.Seconds > 5)
+                                try
                                 {
-                                    Debug.WriteLine("\n\nYEEE\n\n");
+                                    //driver.FindElement(By.XPath($"//span[@class='_1wjpf _3NFp9 _3FXB1' and @title='{targetName}']"));
+                                    driver.FindElement(By.XPath($"//span[@class='_1wjpf _3NFp9 _3FXB1' and contains(@title, {targetName})]"));
                                     break;
                                 }
+                                catch (NoSuchElementException)
+                                {
+                                    if (restTime.Elapsed.Seconds > 5)
+                                    {
+                                        Debug.WriteLine("\n\nYEEE\n\n");
+                                        break;
+                                    }
+                                }
                             }
-                        }
 
-                        restTime.Stop();
+                            restTime.Stop();
 
-                        contact = driver.FindElement(By.XPath($"//span[@class='_1wjpf _3NFp9 _3FXB1' and @title='{targetName}']"));
-                      
-                        SpamTarget(contact, spamNum);
+                            //contact = driver.FindElement(By.XPath($"//span[@class='_1wjpf _3NFp9 _3FXB1' and @title='{targetName}']"));
+                            contact = driver.FindElement(By.XPath($"//span[@class='_1wjpf _3NFp9 _3FXB1' and contains(@title, {targetName})]"));
+
+                            SpamTarget(contact, spamNum);
+                        }                            
                     }
                     catch (NoSuchElementException)
                     {
