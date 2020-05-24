@@ -48,9 +48,10 @@
             this.nameLabel.BackColor = System.Drawing.SystemColors.Desktop;
             this.nameLabel.Font = new System.Drawing.Font("HACKED", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel.ForeColor = System.Drawing.Color.YellowGreen;
-            this.nameLabel.Location = new System.Drawing.Point(12, 14);
+            this.nameLabel.Location = new System.Drawing.Point(24, 27);
+            this.nameLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(101, 35);
+            this.nameLabel.Size = new System.Drawing.Size(201, 68);
             this.nameLabel.TabIndex = 0;
             this.nameLabel.Text = "Target";
             this.nameLabel.MouseEnter += new System.EventHandler(this.nameLabel_MouseEnter);
@@ -62,9 +63,10 @@
             this.nameInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameInput.ForeColor = System.Drawing.Color.OliveDrab;
-            this.nameInput.Location = new System.Drawing.Point(17, 65);
+            this.nameInput.Location = new System.Drawing.Point(34, 126);
+            this.nameInput.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.nameInput.Name = "nameInput";
-            this.nameInput.Size = new System.Drawing.Size(384, 41);
+            this.nameInput.Size = new System.Drawing.Size(766, 75);
             this.nameInput.TabIndex = 1;
             this.nameInput.Text = "Write the target name";
             this.nameInput.Click += new System.EventHandler(this.nameInput_Click);
@@ -77,9 +79,10 @@
             this.messageLabel.BackColor = System.Drawing.SystemColors.Desktop;
             this.messageLabel.Font = new System.Drawing.Font("HACKED", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.messageLabel.ForeColor = System.Drawing.Color.YellowGreen;
-            this.messageLabel.Location = new System.Drawing.Point(11, 150);
+            this.messageLabel.Location = new System.Drawing.Point(22, 291);
+            this.messageLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.messageLabel.Name = "messageLabel";
-            this.messageLabel.Size = new System.Drawing.Size(132, 35);
+            this.messageLabel.Size = new System.Drawing.Size(259, 68);
             this.messageLabel.TabIndex = 2;
             this.messageLabel.Text = "Message";
             this.messageLabel.MouseEnter += new System.EventHandler(this.messageLabel_MouseEnter);
@@ -91,9 +94,10 @@
             this.messageInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.messageInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.messageInput.ForeColor = System.Drawing.Color.OliveDrab;
-            this.messageInput.Location = new System.Drawing.Point(17, 202);
+            this.messageInput.Location = new System.Drawing.Point(34, 391);
+            this.messageInput.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.messageInput.Name = "messageInput";
-            this.messageInput.Size = new System.Drawing.Size(361, 41);
+            this.messageInput.Size = new System.Drawing.Size(720, 75);
             this.messageInput.TabIndex = 3;
             this.messageInput.Text = "Write the message";
             this.messageInput.Click += new System.EventHandler(this.messageInput_Click);
@@ -106,9 +110,10 @@
             this.numberLabel.BackColor = System.Drawing.SystemColors.Desktop;
             this.numberLabel.Font = new System.Drawing.Font("HACKED", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numberLabel.ForeColor = System.Drawing.Color.YellowGreen;
-            this.numberLabel.Location = new System.Drawing.Point(11, 292);
+            this.numberLabel.Location = new System.Drawing.Point(22, 566);
+            this.numberLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.numberLabel.Name = "numberLabel";
-            this.numberLabel.Size = new System.Drawing.Size(205, 35);
+            this.numberLabel.Size = new System.Drawing.Size(413, 68);
             this.numberLabel.TabIndex = 4;
             this.numberLabel.Text = "Spams number";
             this.numberLabel.MouseEnter += new System.EventHandler(this.numberLabel_MouseEnter);
@@ -121,7 +126,8 @@
             this.numberInput.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.numberInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numberInput.ForeColor = System.Drawing.Color.YellowGreen;
-            this.numberInput.Location = new System.Drawing.Point(18, 345);
+            this.numberInput.Location = new System.Drawing.Point(36, 668);
+            this.numberInput.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.numberInput.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -133,7 +139,7 @@
             0,
             0});
             this.numberInput.Name = "numberInput";
-            this.numberInput.Size = new System.Drawing.Size(156, 34);
+            this.numberInput.Size = new System.Drawing.Size(312, 60);
             this.numberInput.TabIndex = 5;
             this.numberInput.Value = new decimal(new int[] {
             1,
@@ -146,9 +152,10 @@
             this.confirmButton.BackColor = System.Drawing.Color.OliveDrab;
             this.confirmButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.confirmButton.Font = new System.Drawing.Font("Arial", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.confirmButton.Location = new System.Drawing.Point(619, 65);
+            this.confirmButton.Location = new System.Drawing.Point(1238, 126);
+            this.confirmButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.confirmButton.Name = "confirmButton";
-            this.confirmButton.Size = new System.Drawing.Size(320, 354);
+            this.confirmButton.Size = new System.Drawing.Size(640, 686);
             this.confirmButton.TabIndex = 6;
             this.confirmButton.Text = "Send";
             this.confirmButton.UseVisualStyleBackColor = false;
@@ -157,9 +164,10 @@
             // progressBar
             // 
             this.progressBar.BackColor = System.Drawing.SystemColors.Desktop;
-            this.progressBar.Location = new System.Drawing.Point(17, 418);
+            this.progressBar.Location = new System.Drawing.Point(34, 810);
+            this.progressBar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(359, 23);
+            this.progressBar.Size = new System.Drawing.Size(718, 45);
             this.progressBar.TabIndex = 7;
             // 
             // italianButton
@@ -167,10 +175,10 @@
             this.italianButton.BackColor = System.Drawing.Color.Gainsboro;
             this.italianButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.italianButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.italianButton.Location = new System.Drawing.Point(909, 14);
-            this.italianButton.Margin = new System.Windows.Forms.Padding(2);
+            this.italianButton.Location = new System.Drawing.Point(1818, 27);
+            this.italianButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.italianButton.Name = "italianButton";
-            this.italianButton.Size = new System.Drawing.Size(54, 39);
+            this.italianButton.Size = new System.Drawing.Size(108, 76);
             this.italianButton.TabIndex = 8;
             this.italianButton.Text = "IT";
             this.italianButton.UseVisualStyleBackColor = false;
@@ -182,10 +190,10 @@
             this.englishButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.englishButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.englishButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.englishButton.Location = new System.Drawing.Point(851, 14);
-            this.englishButton.Margin = new System.Windows.Forms.Padding(2);
+            this.englishButton.Location = new System.Drawing.Point(1702, 27);
+            this.englishButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.englishButton.Name = "englishButton";
-            this.englishButton.Size = new System.Drawing.Size(54, 39);
+            this.englishButton.Size = new System.Drawing.Size(108, 76);
             this.englishButton.TabIndex = 9;
             this.englishButton.Text = "EN";
             this.englishButton.UseVisualStyleBackColor = false;
@@ -194,10 +202,10 @@
             // Whatspam
             // 
             this.AcceptButton = this.confirmButton;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Desktop;
-            this.ClientSize = new System.Drawing.Size(982, 453);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(1968, 886);
             this.Controls.Add(this.englishButton);
             this.Controls.Add(this.italianButton);
             this.Controls.Add(this.progressBar);
@@ -209,8 +217,9 @@
             this.Controls.Add(this.nameInput);
             this.Controls.Add(this.nameLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(1000, 500);
-            this.MinimumSize = new System.Drawing.Size(1000, 500);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.MaximumSize = new System.Drawing.Size(1968, 886);
+            this.MinimumSize = new System.Drawing.Size(1968, 886);
             this.Name = "Whatspam";
             this.Text = "Whatspam";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Whatspam_FormClosed);
