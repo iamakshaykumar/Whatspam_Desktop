@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,21 +34,33 @@ namespace Whatspam
         string insertNameText = "Write the target name";
         string insertMessageText = "Write the message";
         string targetNotFoundText = "Target not found";
+        //Load confirm button images
+        Image confirmButtonOn = Properties.Resources.Confirm_On;
+        Image confirmButtonOff = Properties.Resources.Confirm_Off;
 
         public Whatspam()
         {
             InitializeComponent();
+            RoundCorners(nameInput);
+            RoundCorners(messageInput);
+            RoundCorners(spamInput);
         }
 
         #region SPAMMING
         //When the confirm button gets clicked
         private void confirmButton_Click(object sender, EventArgs e)
         {
+            confirmButton.BackgroundImage = confirmButtonOn;
+            confirmButton.Refresh();
+            Thread.Sleep(100);
+            confirmButton.BackgroundImage = confirmButtonOff;
+            confirmButton.Refresh();
+
             //Checks if there's not an ongoing spamming process
             if (!spammingProcess)
             {
                 //Stores the content of spam numbers form
-                spamNum = (int)numberInput.Value;
+                spamNum = int.Parse(spamInput.Text);
                 //Resets progress bar value
                 progressBar.Value = 0;
                 //Sets a maximum for the progress bar
@@ -80,11 +93,11 @@ namespace Whatspam
                 //Prevents the Dev Tools command prompt from being displayed
                 driverService.HideCommandPromptWindow = true;
 
-                driver = new ChromeDriver(driverService);
-                
-                driver.Url = "https://web.whatsapp.com/";
-
                 browserOpen = true;
+
+                driver = new ChromeDriver(driverService);
+             
+                driver.Url = "https://web.whatsapp.com/";              
             }
             
             //Setting up a timer to give the user a limited amount of time to log in whatsapp
@@ -120,7 +133,7 @@ namespace Whatspam
                 //contact = driver.FindElement(By.XPath($"//span[@class='_1wjpf _3NFp9 _3FXB1' and @title='{targetName}']"));
                 contact = driver.FindElement(By.XPath($"//span[@class='_1wjpf _3NFp9 _3FXB1' and contains(@title, '{targetName}')]"));
                 contact.Click();
-                //SpamTarget(contact, spamNum);
+                SpamTarget(contact, spamNum);
             }
             catch (NoSuchElementException)
             {
@@ -196,9 +209,9 @@ namespace Whatspam
             for (i = 0; i < spamNum && spamming; i++)
             {
                 textField.Clear();
-                //textField.SendKeys(message);
-                //driver.FindElement(By.ClassName("_35EW6")).Click();
-                Thread.Sleep(1000);
+                textField.SendKeys(message);
+                driver.FindElement(By.ClassName("_35EW6")).Click();
+                //Thread.Sleep(1000);
                 incrementProgressbar();
             }
             mainButtonGreen();
@@ -217,6 +230,7 @@ namespace Whatspam
         #endregion
 
         #region LANGUAGE
+        /*
         private void languageItalian(object sender, EventArgs e)
         {
             insertNameText = "Scrivi il nome del contatto";
@@ -244,6 +258,7 @@ namespace Whatspam
             englishButton.BackColor = Color.Gray;
             italianButton.BackColor = Color.Gainsboro;
         }
+        */
         #endregion
 
         #region DEFAULT TEXT
@@ -253,7 +268,7 @@ namespace Whatspam
             if (nameInput.Text == insertNameText || nameInput.Text == targetNotFoundText)
             {
                 nameInput.Text = "";
-                nameInput.ForeColor = Color.YellowGreen;
+                nameInput.ForeColor = Color.Black;
             }
         }
         //Default text vanishes when the name form is clicked
@@ -262,7 +277,7 @@ namespace Whatspam
             if (nameInput.Text == insertNameText || nameInput.Text == targetNotFoundText)
             {
                 nameInput.Text = "";
-                nameInput.ForeColor = Color.YellowGreen;
+                nameInput.ForeColor = Color.Black;
             }
         }
         //If the name form is left empty the default text gets displayed
@@ -280,7 +295,7 @@ namespace Whatspam
             if (messageInput.Text == insertMessageText)
             {
                 messageInput.Text = "";
-                messageInput.ForeColor = Color.YellowGreen;
+                messageInput.ForeColor = Color.Black;
             }          
         }
         //Deafult text vanishes when the message form is clicked
@@ -289,7 +304,7 @@ namespace Whatspam
             if (messageInput.Text == insertMessageText)
             {
                 messageInput.Text = "";
-                messageInput.ForeColor = Color.YellowGreen;
+                messageInput.ForeColor = Color.Black;
             }
         }
         //If the message form is left empty the default text gets displayed
@@ -303,52 +318,6 @@ namespace Whatspam
         }
         #endregion
 
-        #region HIGHLIGHT
-
-        private void nameLabel_MouseEnter(object sender, EventArgs e)
-        {
-            nameLabel.ForeColor = System.Drawing.Color.GreenYellow;
-        }
-
-        private void nameLabel_MouseLeave(object sender, EventArgs e)
-        {
-            nameLabel.ForeColor = System.Drawing.Color.YellowGreen;
-        }
-
-        private void messageLabel_MouseEnter(object sender, EventArgs e)
-        {
-            messageLabel.ForeColor = Color.GreenYellow;
-        }
-
-        private void messageLabel_MouseLeave(object sender, EventArgs e)
-        {
-            messageLabel.ForeColor = Color.YellowGreen;
-        }
-
-        private void numberLabel_MouseEnter(object sender, EventArgs e)
-        {
-            numberLabel.ForeColor = Color.GreenYellow;
-        }
-
-        private void numberLabel_MouseLeave(object sender, EventArgs e)
-        {
-            numberLabel.ForeColor = Color.YellowGreen;
-        }
-
-        #endregion
-
-        #region UTILITIES
-        private bool isIn(string[] arr, string str)
-        {
-            foreach (string s in arr)
-            {
-                if (s == str)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
         #region CROSS-THREAD
         private void incrementProgressbar()
         {
@@ -398,10 +367,80 @@ namespace Whatspam
             confirmButton.Text = "Send";
         }
 
-        
-        #endregion
+
         #endregion
 
+        #region NUMBER_BUTTONS
+        private void number10_Click(object sender, EventArgs e)
+        {
+            spamInput.Text = "10";
+            number10.BackgroundImage = Properties.Resources._10_on_100;
+            number10.Refresh();
+            Thread.Sleep(100);
+            number10.BackgroundImage = Properties.Resources._10_off_100;
+            number10.Refresh();
+        }
 
+        private void number100_Click(object sender, EventArgs e)
+        {
+            spamInput.Text = "100";
+        }
+
+        private void number1k_Click(object sender, EventArgs e)
+        {
+            spamInput.Text = "1000";
+        }
+
+        private void number10k_Click(object sender, EventArgs e)
+        {
+            spamInput.Text = "10000";
+        }
+
+        private void number100k_Click(object sender, EventArgs e)
+        {
+            spamInput.Text = "100000";
+        }
+
+        private void number500k_Click(object sender, EventArgs e)
+        {
+            spamInput.Text = "500000";
+        }
+        #endregion
+
+        private void RoundCorners(Control obj)
+        {
+            GraphicsPath graphicpath = new GraphicsPath();
+            graphicpath.StartFigure();
+            graphicpath.AddArc(0, 0, 25, 25, 180, 90);
+            graphicpath.AddLine(25, 0, obj.Width - 25, 0);
+            graphicpath.AddArc(obj.Width - 25, 0, 25, 25, 270, 90);
+            graphicpath.AddLine(obj.Width, 25, obj.Width, obj.Height - 25);
+            graphicpath.AddArc(obj.Width - 25, obj.Height - 25, 25, 25, 0, 90);
+            graphicpath.AddLine(obj.Width - 25, obj.Height, 25, obj.Height);
+            graphicpath.AddArc(0, obj.Height - 25, 25, 25, 90, 90);
+            graphicpath.CloseFigure();
+            obj.Region = new Region(graphicpath);
+        }
+
+        private void numericUp_Click(object sender, EventArgs e)
+        {
+            spamInput.Text = (int.Parse(spamInput.Text) + 1).ToString();
+        }
+
+        private void numericDown_Click(object sender, EventArgs e)
+        {
+            if (spamInput.Text != "1")
+            {
+                spamInput.Text = (int.Parse(spamInput.Text) - 1).ToString();
+            }           
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }            
+        }
     }
 }

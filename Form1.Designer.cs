@@ -29,218 +29,241 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Whatspam));
-            this.nameLabel = new System.Windows.Forms.Label();
             this.nameInput = new System.Windows.Forms.TextBox();
-            this.messageLabel = new System.Windows.Forms.Label();
             this.messageInput = new System.Windows.Forms.TextBox();
-            this.numberLabel = new System.Windows.Forms.Label();
-            this.numberInput = new System.Windows.Forms.NumericUpDown();
-            this.confirmButton = new System.Windows.Forms.Button();
             this.progressBar = new System.Windows.Forms.ProgressBar();
-            this.italianButton = new System.Windows.Forms.Button();
-            this.englishButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numberInput)).BeginInit();
+            this.confirmButton = new System.Windows.Forms.Button();
+            this.spamInput = new System.Windows.Forms.TextBox();
+            this.numericUp = new System.Windows.Forms.Button();
+            this.numericDown = new System.Windows.Forms.Button();
+            this.number10 = new System.Windows.Forms.Button();
+            this.number100 = new System.Windows.Forms.Button();
+            this.number1k = new System.Windows.Forms.Button();
+            this.number10k = new System.Windows.Forms.Button();
+            this.number100k = new System.Windows.Forms.Button();
+            this.number500k = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // nameLabel
-            // 
-            this.nameLabel.AutoSize = true;
-            this.nameLabel.BackColor = System.Drawing.SystemColors.Desktop;
-            this.nameLabel.Font = new System.Drawing.Font("HACKED", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameLabel.ForeColor = System.Drawing.Color.YellowGreen;
-            this.nameLabel.Location = new System.Drawing.Point(24, 27);
-            this.nameLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(201, 68);
-            this.nameLabel.TabIndex = 0;
-            this.nameLabel.Text = "Target";
-            this.nameLabel.MouseEnter += new System.EventHandler(this.nameLabel_MouseEnter);
-            this.nameLabel.MouseLeave += new System.EventHandler(this.nameLabel_MouseLeave);
             // 
             // nameInput
             // 
-            this.nameInput.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.nameInput.BackColor = System.Drawing.Color.WhiteSmoke;
             this.nameInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameInput.ForeColor = System.Drawing.Color.OliveDrab;
-            this.nameInput.Location = new System.Drawing.Point(34, 126);
-            this.nameInput.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.nameInput.Location = new System.Drawing.Point(131, 157);
+            this.nameInput.Margin = new System.Windows.Forms.Padding(6);
             this.nameInput.Name = "nameInput";
-            this.nameInput.Size = new System.Drawing.Size(766, 75);
+            this.nameInput.Size = new System.Drawing.Size(586, 53);
             this.nameInput.TabIndex = 1;
             this.nameInput.Text = "Write the target name";
             this.nameInput.Click += new System.EventHandler(this.nameInput_Click);
             this.nameInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nameInput_KeyDown);
             this.nameInput.Leave += new System.EventHandler(this.nameInput_Leave);
             // 
-            // messageLabel
-            // 
-            this.messageLabel.AutoSize = true;
-            this.messageLabel.BackColor = System.Drawing.SystemColors.Desktop;
-            this.messageLabel.Font = new System.Drawing.Font("HACKED", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.messageLabel.ForeColor = System.Drawing.Color.YellowGreen;
-            this.messageLabel.Location = new System.Drawing.Point(22, 291);
-            this.messageLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.messageLabel.Name = "messageLabel";
-            this.messageLabel.Size = new System.Drawing.Size(259, 68);
-            this.messageLabel.TabIndex = 2;
-            this.messageLabel.Text = "Message";
-            this.messageLabel.MouseEnter += new System.EventHandler(this.messageLabel_MouseEnter);
-            this.messageLabel.MouseLeave += new System.EventHandler(this.messageLabel_MouseLeave);
-            // 
             // messageInput
             // 
-            this.messageInput.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.messageInput.BackColor = System.Drawing.Color.WhiteSmoke;
             this.messageInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.messageInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.messageInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.messageInput.ForeColor = System.Drawing.Color.OliveDrab;
-            this.messageInput.Location = new System.Drawing.Point(34, 391);
-            this.messageInput.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.messageInput.Location = new System.Drawing.Point(131, 339);
+            this.messageInput.Margin = new System.Windows.Forms.Padding(6);
             this.messageInput.Name = "messageInput";
-            this.messageInput.Size = new System.Drawing.Size(720, 75);
+            this.messageInput.Size = new System.Drawing.Size(586, 53);
             this.messageInput.TabIndex = 3;
             this.messageInput.Text = "Write the message";
             this.messageInput.Click += new System.EventHandler(this.messageInput_Click);
             this.messageInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.messageInput_KeyDown);
             this.messageInput.Leave += new System.EventHandler(this.messageInput_Leave);
             // 
-            // numberLabel
-            // 
-            this.numberLabel.AutoSize = true;
-            this.numberLabel.BackColor = System.Drawing.SystemColors.Desktop;
-            this.numberLabel.Font = new System.Drawing.Font("HACKED", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numberLabel.ForeColor = System.Drawing.Color.YellowGreen;
-            this.numberLabel.Location = new System.Drawing.Point(22, 566);
-            this.numberLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.numberLabel.Name = "numberLabel";
-            this.numberLabel.Size = new System.Drawing.Size(413, 68);
-            this.numberLabel.TabIndex = 4;
-            this.numberLabel.Text = "Spams number";
-            this.numberLabel.MouseEnter += new System.EventHandler(this.numberLabel_MouseEnter);
-            this.numberLabel.MouseLeave += new System.EventHandler(this.numberLabel_MouseLeave);
-            // 
-            // numberInput
-            // 
-            this.numberInput.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.numberInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numberInput.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.numberInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numberInput.ForeColor = System.Drawing.Color.YellowGreen;
-            this.numberInput.Location = new System.Drawing.Point(36, 668);
-            this.numberInput.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.numberInput.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.numberInput.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numberInput.Name = "numberInput";
-            this.numberInput.Size = new System.Drawing.Size(312, 60);
-            this.numberInput.TabIndex = 5;
-            this.numberInput.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // confirmButton
-            // 
-            this.confirmButton.BackColor = System.Drawing.Color.OliveDrab;
-            this.confirmButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.confirmButton.Font = new System.Drawing.Font("Arial", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.confirmButton.Location = new System.Drawing.Point(1238, 126);
-            this.confirmButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.confirmButton.Name = "confirmButton";
-            this.confirmButton.Size = new System.Drawing.Size(640, 686);
-            this.confirmButton.TabIndex = 6;
-            this.confirmButton.Text = "Send";
-            this.confirmButton.UseVisualStyleBackColor = false;
-            this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
-            // 
             // progressBar
             // 
-            this.progressBar.BackColor = System.Drawing.SystemColors.Desktop;
-            this.progressBar.Location = new System.Drawing.Point(34, 810);
-            this.progressBar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.progressBar.BackColor = System.Drawing.Color.Black;
+            this.progressBar.ForeColor = System.Drawing.Color.Red;
+            this.progressBar.Location = new System.Drawing.Point(1142, 845);
+            this.progressBar.Margin = new System.Windows.Forms.Padding(6);
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(718, 45);
             this.progressBar.TabIndex = 7;
             // 
-            // italianButton
+            // confirmButton
             // 
-            this.italianButton.BackColor = System.Drawing.Color.Gainsboro;
-            this.italianButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.italianButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.italianButton.Location = new System.Drawing.Point(1818, 27);
-            this.italianButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.italianButton.Name = "italianButton";
-            this.italianButton.Size = new System.Drawing.Size(108, 76);
-            this.italianButton.TabIndex = 8;
-            this.italianButton.Text = "IT";
-            this.italianButton.UseVisualStyleBackColor = false;
-            this.italianButton.Click += new System.EventHandler(this.languageItalian);
+            this.confirmButton.BackColor = System.Drawing.Color.Black;
+            this.confirmButton.BackgroundImage = global::Whatspam.Properties.Resources.Confirm_Off;
+            this.confirmButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.confirmButton.FlatAppearance.BorderSize = 0;
+            this.confirmButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.confirmButton.Location = new System.Drawing.Point(1204, 84);
+            this.confirmButton.Name = "confirmButton";
+            this.confirmButton.Size = new System.Drawing.Size(630, 630);
+            this.confirmButton.TabIndex = 8;
+            this.confirmButton.UseVisualStyleBackColor = false;
+            this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
             // 
-            // englishButton
+            // spamInput
             // 
-            this.englishButton.BackColor = System.Drawing.Color.Gray;
-            this.englishButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.englishButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.englishButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.englishButton.Location = new System.Drawing.Point(1702, 27);
-            this.englishButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.englishButton.Name = "englishButton";
-            this.englishButton.Size = new System.Drawing.Size(108, 76);
-            this.englishButton.TabIndex = 9;
-            this.englishButton.Text = "EN";
-            this.englishButton.UseVisualStyleBackColor = false;
-            this.englishButton.Click += new System.EventHandler(this.languageEnglish);
+            this.spamInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spamInput.Location = new System.Drawing.Point(131, 504);
+            this.spamInput.Name = "spamInput";
+            this.spamInput.Size = new System.Drawing.Size(241, 53);
+            this.spamInput.TabIndex = 9;
+            this.spamInput.Text = "1";
+            this.spamInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
+            // numericUp
+            // 
+            this.numericUp.BackgroundImage = global::Whatspam.Properties.Resources.freccia_su_100;
+            this.numericUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.numericUp.Location = new System.Drawing.Point(407, 490);
+            this.numericUp.Name = "numericUp";
+            this.numericUp.Size = new System.Drawing.Size(70, 36);
+            this.numericUp.TabIndex = 10;
+            this.numericUp.UseVisualStyleBackColor = true;
+            this.numericUp.Click += new System.EventHandler(this.numericUp_Click);
+            // 
+            // numericDown
+            // 
+            this.numericDown.BackgroundImage = global::Whatspam.Properties.Resources.freccia_giu_100;
+            this.numericDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.numericDown.Location = new System.Drawing.Point(407, 532);
+            this.numericDown.Name = "numericDown";
+            this.numericDown.Size = new System.Drawing.Size(70, 36);
+            this.numericDown.TabIndex = 11;
+            this.numericDown.UseVisualStyleBackColor = true;
+            this.numericDown.Click += new System.EventHandler(this.numericDown_Click);
+            // 
+            // number10
+            // 
+            this.number10.BackColor = System.Drawing.Color.Transparent;
+            this.number10.BackgroundImage = global::Whatspam.Properties.Resources._10_off_100;
+            this.number10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.number10.FlatAppearance.BorderSize = 0;
+            this.number10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.number10.Location = new System.Drawing.Point(96, 623);
+            this.number10.Name = "number10";
+            this.number10.Size = new System.Drawing.Size(163, 164);
+            this.number10.TabIndex = 12;
+            this.number10.UseVisualStyleBackColor = false;
+            this.number10.Click += new System.EventHandler(this.number10_Click);
+            // 
+            // number100
+            // 
+            this.number100.BackColor = System.Drawing.Color.Transparent;
+            this.number100.BackgroundImage = global::Whatspam.Properties.Resources._100_off_100;
+            this.number100.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.number100.FlatAppearance.BorderSize = 0;
+            this.number100.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.number100.Location = new System.Drawing.Point(314, 623);
+            this.number100.Name = "number100";
+            this.number100.Size = new System.Drawing.Size(163, 164);
+            this.number100.TabIndex = 13;
+            this.number100.UseVisualStyleBackColor = false;
+            this.number100.Click += new System.EventHandler(this.number100_Click);
+            // 
+            // number1k
+            // 
+            this.number1k.BackColor = System.Drawing.Color.Transparent;
+            this.number1k.BackgroundImage = global::Whatspam.Properties.Resources._1k_off_100;
+            this.number1k.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.number1k.FlatAppearance.BorderSize = 0;
+            this.number1k.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.number1k.Location = new System.Drawing.Point(525, 623);
+            this.number1k.Name = "number1k";
+            this.number1k.Size = new System.Drawing.Size(163, 164);
+            this.number1k.TabIndex = 14;
+            this.number1k.UseVisualStyleBackColor = false;
+            this.number1k.Click += new System.EventHandler(this.number1k_Click);
+            // 
+            // number10k
+            // 
+            this.number10k.BackColor = System.Drawing.Color.Transparent;
+            this.number10k.BackgroundImage = global::Whatspam.Properties.Resources._10k_off_100;
+            this.number10k.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.number10k.FlatAppearance.BorderSize = 0;
+            this.number10k.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.number10k.Location = new System.Drawing.Point(96, 793);
+            this.number10k.Name = "number10k";
+            this.number10k.Size = new System.Drawing.Size(163, 164);
+            this.number10k.TabIndex = 15;
+            this.number10k.UseVisualStyleBackColor = false;
+            this.number10k.Click += new System.EventHandler(this.number10k_Click);
+            // 
+            // number100k
+            // 
+            this.number100k.BackColor = System.Drawing.Color.Transparent;
+            this.number100k.BackgroundImage = global::Whatspam.Properties.Resources._100k_off_100;
+            this.number100k.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.number100k.FlatAppearance.BorderSize = 0;
+            this.number100k.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.number100k.Location = new System.Drawing.Point(314, 793);
+            this.number100k.Name = "number100k";
+            this.number100k.Size = new System.Drawing.Size(163, 164);
+            this.number100k.TabIndex = 16;
+            this.number100k.UseVisualStyleBackColor = false;
+            this.number100k.Click += new System.EventHandler(this.number100k_Click);
+            // 
+            // number500k
+            // 
+            this.number500k.BackColor = System.Drawing.Color.Transparent;
+            this.number500k.BackgroundImage = global::Whatspam.Properties.Resources._500k_off_100;
+            this.number500k.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.number500k.FlatAppearance.BorderSize = 0;
+            this.number500k.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.number500k.Location = new System.Drawing.Point(525, 793);
+            this.number500k.Name = "number500k";
+            this.number500k.Size = new System.Drawing.Size(163, 164);
+            this.number500k.TabIndex = 17;
+            this.number500k.UseVisualStyleBackColor = false;
+            this.number500k.Click += new System.EventHandler(this.number500k_Click);
             // 
             // Whatspam
             // 
-            this.AcceptButton = this.confirmButton;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(240F, 240F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1968, 886);
-            this.Controls.Add(this.englishButton);
-            this.Controls.Add(this.italianButton);
-            this.Controls.Add(this.progressBar);
+            this.BackgroundImage = global::Whatspam.Properties.Resources.Background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1888, 992);
+            this.Controls.Add(this.number500k);
+            this.Controls.Add(this.number100k);
+            this.Controls.Add(this.number10k);
+            this.Controls.Add(this.number1k);
+            this.Controls.Add(this.number100);
+            this.Controls.Add(this.number10);
+            this.Controls.Add(this.numericDown);
+            this.Controls.Add(this.numericUp);
+            this.Controls.Add(this.spamInput);
             this.Controls.Add(this.confirmButton);
-            this.Controls.Add(this.numberInput);
-            this.Controls.Add(this.numberLabel);
+            this.Controls.Add(this.progressBar);
             this.Controls.Add(this.messageInput);
-            this.Controls.Add(this.messageLabel);
             this.Controls.Add(this.nameInput);
-            this.Controls.Add(this.nameLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.MaximumSize = new System.Drawing.Size(1968, 886);
-            this.MinimumSize = new System.Drawing.Size(1968, 886);
+            this.Margin = new System.Windows.Forms.Padding(6);
+            this.MaximumSize = new System.Drawing.Size(1920, 1080);
+            this.MinimumSize = new System.Drawing.Size(1920, 1080);
             this.Name = "Whatspam";
             this.Text = "Whatspam";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Whatspam_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.numberInput)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.TextBox nameInput;
-        private System.Windows.Forms.Label messageLabel;
         private System.Windows.Forms.TextBox messageInput;
-        private System.Windows.Forms.Label numberLabel;
-        private System.Windows.Forms.NumericUpDown numberInput;
-        private System.Windows.Forms.Button confirmButton;
         private System.Windows.Forms.ProgressBar progressBar;
-        private System.Windows.Forms.Button italianButton;
-        private System.Windows.Forms.Button englishButton;
+        private System.Windows.Forms.Button confirmButton;
+        private System.Windows.Forms.TextBox spamInput;
+        private System.Windows.Forms.Button numericUp;
+        private System.Windows.Forms.Button numericDown;
+        private System.Windows.Forms.Button number10;
+        private System.Windows.Forms.Button number100;
+        private System.Windows.Forms.Button number1k;
+        private System.Windows.Forms.Button number10k;
+        private System.Windows.Forms.Button number100k;
+        private System.Windows.Forms.Button number500k;
     }
 }
 
