@@ -118,58 +118,121 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="100k off-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Grafiche_Whatspam_2.0\100k off-100.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Confirm_Off" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Grafiche_Whatspam_2.0\Confirm_Off.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="freccia giu-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Grafiche_Whatspam_2.0\freccia giu-100.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Grafiche_Whatspam_2.0\Background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="freccia su-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Grafiche_Whatspam_2.0\freccia su-100.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Confirm_On" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Grafiche_Whatspam_2.0\Confirm_On.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1k off-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Grafiche_Whatspam_2.0\1k off-100.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1k on-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Grafiche_Whatspam_2.0\1k on-100.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="100 off-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Grafiche_Whatspam_2.0\100 off-100.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="10 off-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Grafiche_Whatspam_2.0\10 off-100.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="10 on-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Grafiche_Whatspam_2.0\10 on-100.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="10k off-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Grafiche_Whatspam_2.0\10k off-100.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="10k on-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Grafiche_Whatspam_2.0\10k on-100.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="100 off-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Grafiche_Whatspam_2.0\100 off-100.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="100 on-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Grafiche_Whatspam_2.0\100 on-100.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="100k off-1001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="100k off-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Grafiche_Whatspam_2.0\100k off-100.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="100k on-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Grafiche_Whatspam_2.0\100k on-100.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="freccia su-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Grafiche_Whatspam_2.0\freccia su-100.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="100k off-1001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Grafiche_Whatspam_2.0\100k off-100.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1k on-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Grafiche_Whatspam_2.0\1k on-100.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1k off-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Grafiche_Whatspam_2.0\1k off-100.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Grafiche_Whatspam_2.0\Background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="500k off-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Grafiche_Whatspam_2.0\500k off-100.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="10k on-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Grafiche_Whatspam_2.0\10k on-100.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="500k on-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Grafiche_Whatspam_2.0\500k on-100.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="10k off-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Grafiche_Whatspam_2.0\10k off-100.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="freccia giu-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Grafiche_Whatspam_2.0\freccia giu-100.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="100 on-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Grafiche_Whatspam_2.0\100 on-100.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="10 on-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Grafiche_Whatspam_2.0\10 on-100.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Confirm_On" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Grafiche_Whatspam_2.0\Confirm_On.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Confirm_Off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Grafiche_Whatspam_2.0\Confirm_Off.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1k off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Grafiche Whatspam 3.0\1k off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1k on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Grafiche Whatspam 3.0\1k on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="10 off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Grafiche Whatspam 3.0\10 off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="10 on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Grafiche Whatspam 3.0\10 on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="10k off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Grafiche Whatspam 3.0\10k off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="10k on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Grafiche Whatspam 3.0\10k on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="100 off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Grafiche Whatspam 3.0\100 off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="100 on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Grafiche Whatspam 3.0\100 on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="100k off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Grafiche Whatspam 3.0\100k off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="100k on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Grafiche Whatspam 3.0\100k on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="500k off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Grafiche Whatspam 3.0\500k off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="500k on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Grafiche Whatspam 3.0\500k on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bottone acceso normale)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Grafiche Whatspam 3.0\Bottone acceso normale).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bottone acceso normale" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Grafiche Whatspam 3.0\Bottone acceso normale.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bottone acceso premuto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Grafiche Whatspam 3.0\Bottone acceso premuto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bottone spento normale" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Grafiche Whatspam 3.0\Bottone spento normale.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bottone spento premuto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Grafiche Whatspam 3.0\Bottone spento premuto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="freccia giu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Grafiche Whatspam 3.0\freccia giu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="freccia su" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Grafiche Whatspam 3.0\freccia su.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sfondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Grafiche Whatspam 3.0\Sfondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Status" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Grafiche Whatspam 3.0\Status.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -66,7 +66,7 @@
             this.messageInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.messageInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.messageInput.ForeColor = System.Drawing.Color.OliveDrab;
-            this.messageInput.Location = new System.Drawing.Point(131, 339);
+            this.messageInput.Location = new System.Drawing.Point(131, 342);
             this.messageInput.Margin = new System.Windows.Forms.Padding(6);
             this.messageInput.Name = "messageInput";
             this.messageInput.Size = new System.Drawing.Size(586, 53);
@@ -80,25 +80,30 @@
             // 
             this.progressBar.BackColor = System.Drawing.Color.Black;
             this.progressBar.ForeColor = System.Drawing.Color.Red;
-            this.progressBar.Location = new System.Drawing.Point(1142, 845);
+            this.progressBar.Location = new System.Drawing.Point(1195, 759);
             this.progressBar.Margin = new System.Windows.Forms.Padding(6);
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(718, 45);
+            this.progressBar.Size = new System.Drawing.Size(630, 54);
             this.progressBar.TabIndex = 7;
             // 
             // confirmButton
             // 
-            this.confirmButton.BackColor = System.Drawing.Color.Black;
-            this.confirmButton.BackgroundImage = global::Whatspam.Properties.Resources.Confirm_Off;
+            this.confirmButton.BackColor = System.Drawing.Color.Transparent;
+            this.confirmButton.BackgroundImage = global::Whatspam.Properties.Resources.Bottone_spento_normale;
             this.confirmButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.confirmButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.confirmButton.FlatAppearance.BorderSize = 0;
+            this.confirmButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.confirmButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.confirmButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.confirmButton.Location = new System.Drawing.Point(1204, 84);
+            this.confirmButton.Location = new System.Drawing.Point(1195, 12);
             this.confirmButton.Name = "confirmButton";
             this.confirmButton.Size = new System.Drawing.Size(630, 630);
             this.confirmButton.TabIndex = 8;
             this.confirmButton.UseVisualStyleBackColor = false;
             this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
+            this.confirmButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.confirmButton_MouseDown);
+            this.confirmButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.confirmButton_MouseUp);
             // 
             // spamInput
             // 
@@ -112,109 +117,152 @@
             // 
             // numericUp
             // 
-            this.numericUp.BackgroundImage = global::Whatspam.Properties.Resources.freccia_su_100;
+            this.numericUp.BackColor = System.Drawing.Color.Transparent;
+            this.numericUp.BackgroundImage = global::Whatspam.Properties.Resources.freccia_su;
             this.numericUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.numericUp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.numericUp.FlatAppearance.BorderSize = 0;
+            this.numericUp.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.numericUp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.numericUp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.numericUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.numericUp.Location = new System.Drawing.Point(407, 490);
             this.numericUp.Name = "numericUp";
             this.numericUp.Size = new System.Drawing.Size(70, 36);
             this.numericUp.TabIndex = 10;
-            this.numericUp.UseVisualStyleBackColor = true;
+            this.numericUp.UseVisualStyleBackColor = false;
             this.numericUp.Click += new System.EventHandler(this.numericUp_Click);
             // 
             // numericDown
             // 
-            this.numericDown.BackgroundImage = global::Whatspam.Properties.Resources.freccia_giu_100;
+            this.numericDown.BackColor = System.Drawing.Color.Transparent;
+            this.numericDown.BackgroundImage = global::Whatspam.Properties.Resources.freccia_giu;
             this.numericDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.numericDown.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.numericDown.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.numericDown.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.numericDown.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.numericDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.numericDown.Location = new System.Drawing.Point(407, 532);
             this.numericDown.Name = "numericDown";
             this.numericDown.Size = new System.Drawing.Size(70, 36);
             this.numericDown.TabIndex = 11;
-            this.numericDown.UseVisualStyleBackColor = true;
+            this.numericDown.UseVisualStyleBackColor = false;
             this.numericDown.Click += new System.EventHandler(this.numericDown_Click);
             // 
             // number10
             // 
             this.number10.BackColor = System.Drawing.Color.Transparent;
-            this.number10.BackgroundImage = global::Whatspam.Properties.Resources._10_off_100;
+            this.number10.BackgroundImage = global::Whatspam.Properties.Resources._10_off;
             this.number10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.number10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.number10.FlatAppearance.BorderSize = 0;
+            this.number10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.number10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.number10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.number10.Location = new System.Drawing.Point(96, 623);
+            this.number10.Location = new System.Drawing.Point(60, 574);
             this.number10.Name = "number10";
-            this.number10.Size = new System.Drawing.Size(163, 164);
+            this.number10.Size = new System.Drawing.Size(248, 239);
             this.number10.TabIndex = 12;
+            this.number10.Tag = "10";
             this.number10.UseVisualStyleBackColor = false;
-            this.number10.Click += new System.EventHandler(this.number10_Click);
+            this.number10.MouseDown += new System.Windows.Forms.MouseEventHandler(this.number10_MouseDown);
+            this.number10.MouseUp += new System.Windows.Forms.MouseEventHandler(this.number10_MouseUp);
             // 
             // number100
             // 
             this.number100.BackColor = System.Drawing.Color.Transparent;
-            this.number100.BackgroundImage = global::Whatspam.Properties.Resources._100_off_100;
+            this.number100.BackgroundImage = global::Whatspam.Properties.Resources._100_off;
             this.number100.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.number100.Cursor = System.Windows.Forms.Cursors.Hand;
             this.number100.FlatAppearance.BorderSize = 0;
+            this.number100.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.number100.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.number100.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.number100.Location = new System.Drawing.Point(314, 623);
+            this.number100.Location = new System.Drawing.Point(280, 574);
             this.number100.Name = "number100";
-            this.number100.Size = new System.Drawing.Size(163, 164);
+            this.number100.Size = new System.Drawing.Size(248, 239);
             this.number100.TabIndex = 13;
+            this.number100.Tag = "100";
             this.number100.UseVisualStyleBackColor = false;
-            this.number100.Click += new System.EventHandler(this.number100_Click);
+            this.number100.MouseDown += new System.Windows.Forms.MouseEventHandler(this.number100_MouseDown);
+            this.number100.MouseUp += new System.Windows.Forms.MouseEventHandler(this.number100_MouseUp);
             // 
             // number1k
             // 
             this.number1k.BackColor = System.Drawing.Color.Transparent;
-            this.number1k.BackgroundImage = global::Whatspam.Properties.Resources._1k_off_100;
+            this.number1k.BackgroundImage = global::Whatspam.Properties.Resources._1k_off;
             this.number1k.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.number1k.Cursor = System.Windows.Forms.Cursors.Hand;
             this.number1k.FlatAppearance.BorderSize = 0;
+            this.number1k.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.number1k.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.number1k.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.number1k.Location = new System.Drawing.Point(525, 623);
+            this.number1k.Location = new System.Drawing.Point(516, 574);
             this.number1k.Name = "number1k";
-            this.number1k.Size = new System.Drawing.Size(163, 164);
+            this.number1k.Size = new System.Drawing.Size(248, 239);
             this.number1k.TabIndex = 14;
+            this.number1k.Tag = "1k";
             this.number1k.UseVisualStyleBackColor = false;
-            this.number1k.Click += new System.EventHandler(this.number1k_Click);
+            this.number1k.MouseDown += new System.Windows.Forms.MouseEventHandler(this.number1k_MouseDown);
+            this.number1k.MouseUp += new System.Windows.Forms.MouseEventHandler(this.number1k_MouseUp);
             // 
             // number10k
             // 
             this.number10k.BackColor = System.Drawing.Color.Transparent;
-            this.number10k.BackgroundImage = global::Whatspam.Properties.Resources._10k_off_100;
+            this.number10k.BackgroundImage = global::Whatspam.Properties.Resources._10k_off;
             this.number10k.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.number10k.Cursor = System.Windows.Forms.Cursors.Hand;
             this.number10k.FlatAppearance.BorderSize = 0;
+            this.number10k.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.number10k.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.number10k.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.number10k.Location = new System.Drawing.Point(96, 793);
+            this.number10k.Location = new System.Drawing.Point(60, 776);
             this.number10k.Name = "number10k";
-            this.number10k.Size = new System.Drawing.Size(163, 164);
+            this.number10k.Size = new System.Drawing.Size(248, 249);
             this.number10k.TabIndex = 15;
+            this.number10k.Tag = "10k";
             this.number10k.UseVisualStyleBackColor = false;
-            this.number10k.Click += new System.EventHandler(this.number10k_Click);
+            this.number10k.MouseDown += new System.Windows.Forms.MouseEventHandler(this.number10k_MouseDown);
+            this.number10k.MouseUp += new System.Windows.Forms.MouseEventHandler(this.number10k_MouseUp);
             // 
             // number100k
             // 
             this.number100k.BackColor = System.Drawing.Color.Transparent;
-            this.number100k.BackgroundImage = global::Whatspam.Properties.Resources._100k_off_100;
+            this.number100k.BackgroundImage = global::Whatspam.Properties.Resources._100k_off;
             this.number100k.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.number100k.Cursor = System.Windows.Forms.Cursors.Hand;
             this.number100k.FlatAppearance.BorderSize = 0;
+            this.number100k.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.number100k.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.number100k.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.number100k.Location = new System.Drawing.Point(314, 793);
+            this.number100k.Location = new System.Drawing.Point(280, 776);
             this.number100k.Name = "number100k";
-            this.number100k.Size = new System.Drawing.Size(163, 164);
+            this.number100k.Size = new System.Drawing.Size(248, 249);
             this.number100k.TabIndex = 16;
+            this.number100k.Tag = "100k";
             this.number100k.UseVisualStyleBackColor = false;
-            this.number100k.Click += new System.EventHandler(this.number100k_Click);
+            this.number100k.MouseDown += new System.Windows.Forms.MouseEventHandler(this.number100k_MouseDown);
+            this.number100k.MouseUp += new System.Windows.Forms.MouseEventHandler(this.number100k_MouseUp);
             // 
             // number500k
             // 
             this.number500k.BackColor = System.Drawing.Color.Transparent;
-            this.number500k.BackgroundImage = global::Whatspam.Properties.Resources._500k_off_100;
+            this.number500k.BackgroundImage = global::Whatspam.Properties.Resources._500k_off;
             this.number500k.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.number500k.Cursor = System.Windows.Forms.Cursors.Hand;
             this.number500k.FlatAppearance.BorderSize = 0;
+            this.number500k.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.number500k.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.number500k.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.number500k.Location = new System.Drawing.Point(525, 793);
+            this.number500k.Location = new System.Drawing.Point(516, 776);
             this.number500k.Name = "number500k";
-            this.number500k.Size = new System.Drawing.Size(163, 164);
+            this.number500k.Size = new System.Drawing.Size(248, 249);
             this.number500k.TabIndex = 17;
+            this.number500k.Tag = "500k";
             this.number500k.UseVisualStyleBackColor = false;
-            this.number500k.Click += new System.EventHandler(this.number500k_Click);
+            this.number500k.MouseDown += new System.Windows.Forms.MouseEventHandler(this.number500k_MouseDown);
+            this.number500k.MouseUp += new System.Windows.Forms.MouseEventHandler(this.number500k_MouseUp);
             // 
             // Whatspam
             // 
@@ -243,7 +291,6 @@
             this.MinimumSize = new System.Drawing.Size(1920, 1080);
             this.Name = "Whatspam";
             this.Text = "Whatspam";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Whatspam_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
