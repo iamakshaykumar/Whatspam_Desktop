@@ -92,6 +92,7 @@
             this.confirmButton.BackgroundImage = global::Whatspam.Properties.Resources.Bottone_spento_normale;
             this.confirmButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.confirmButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.confirmButton.Enabled = false;
             this.confirmButton.FlatAppearance.BorderSize = 0;
             this.confirmButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.confirmButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;

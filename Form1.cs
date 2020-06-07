@@ -40,8 +40,7 @@ namespace Whatspam
         string targetNotFoundText = "Target not found";
 
         Button activeNumberButton = null;
-
-   
+  
         public Whatspam()
         {
             InitializeComponent();
@@ -73,7 +72,15 @@ namespace Whatspam
             }
             else if (spamming)
             {
-                confirmButton.BackgroundImage = Properties.Resources.Bottone_spento_normale;
+                if (messageInput.Text != "" && nameInput.Text != "")
+                {
+                    confirmButton.BackgroundImage = Properties.Resources.Bottone_acceso_normale_;
+                }
+                else
+                {
+                    confirmButton.BackgroundImage = Properties.Resources.Bottone_spento_normale;
+                    confirmButton.Enabled = false;
+                }
                 confirmButton.Refresh();
                 progressBar.Value = 0; 
                 spamming = false;
@@ -290,6 +297,12 @@ namespace Whatspam
                 nameInput.Text = "";
                 nameInput.ForeColor = Color.Black;
             }
+            if (messageInput.Text != "" && messageInput.Text != insertMessageText)
+            {
+                confirmButton.Enabled = true;
+                confirmButton.BackgroundImage = Properties.Resources.Bottone_acceso_normale_;
+                confirmButton.Refresh();
+            }
         }
         //Default text vanishes when the name form is clicked
         private void nameInput_Click(object sender, EventArgs e)
@@ -297,7 +310,7 @@ namespace Whatspam
             if (nameInput.Text == insertNameText || nameInput.Text == targetNotFoundText)
             {
                 nameInput.Text = "";
-                nameInput.ForeColor = Color.Black;
+                nameInput.ForeColor = Color.Black;           
             }
         }
         //If the name form is left empty the default text gets displayed
@@ -307,6 +320,9 @@ namespace Whatspam
             {
                 nameInput.Text = insertNameText;
                 nameInput.ForeColor = Color.OliveDrab;
+                confirmButton.Enabled = false;
+                confirmButton.BackgroundImage = Properties.Resources.Bottone_spento_normale;
+                confirmButton.Refresh();
             }
         }
         //Default text vanishes when something is written in the message form
@@ -315,7 +331,13 @@ namespace Whatspam
             if (messageInput.Text == insertMessageText)
             {
                 messageInput.Text = "";
-                messageInput.ForeColor = Color.Black;
+                messageInput.ForeColor = Color.Black;               
+            }
+            if (nameInput.Text != "" && nameInput.Text != insertNameText && nameInput.Text != targetNotFoundText)
+            {
+                confirmButton.Enabled = true;
+                confirmButton.BackgroundImage = Properties.Resources.Bottone_acceso_normale_;
+                confirmButton.Refresh();
             }
         }
         //Deafult text vanishes when the message form is clicked
@@ -334,6 +356,9 @@ namespace Whatspam
             {
                 messageInput.Text = insertMessageText;
                 messageInput.ForeColor = Color.OliveDrab;
+                confirmButton.Enabled = false;
+                confirmButton.BackgroundImage = Properties.Resources.Bottone_spento_normale;
+                confirmButton.Refresh();
             }
         }
         #endregion
