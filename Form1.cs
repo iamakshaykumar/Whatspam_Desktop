@@ -38,8 +38,6 @@ namespace Whatspam
         string insertNameText = "Write the target name";
         string insertMessageText = "Write the message";
         string targetNotFoundText = "Target not found";
-
-        Button activeNumberButton = null;
   
         public Whatspam()
         {
@@ -419,115 +417,78 @@ namespace Whatspam
         //CURRENTLY NOT USING THE MOUSE_UP FUNCTIONS
         private void number10_MouseDown(object sender, MouseEventArgs e)
         {
-            turnOffButtons(activeNumberButton);
             number10.BackgroundImage = Properties.Resources._10_on;
             number10.Refresh();
-            spamInput.Text = "10";
-            activeNumberButton = number10;
-
         }
 
         private void number10_MouseUp(object sender, MouseEventArgs e)
         {
-            
+            number10.BackgroundImage = Properties.Resources._10_off;
+            number10.Refresh();
+            spamInput.Text = (int.Parse(spamInput.Text) + 10).ToString();
         }
         private void number100_MouseDown(object sender, MouseEventArgs e)
         {
-            turnOffButtons(activeNumberButton);
             number100.BackgroundImage = Properties.Resources._100_on;
             number100.Refresh();
-            spamInput.Text = "100";
-            activeNumberButton = number100;
         }
 
         private void number100_MouseUp(object sender, MouseEventArgs e)
         {
-            
+            number100.BackgroundImage = Properties.Resources._100_off;
+            number100.Refresh();
+            spamInput.Text = (int.Parse(spamInput.Text) + 100).ToString();
         }
         private void number1k_MouseDown(object sender, MouseEventArgs e)
         {
-            turnOffButtons(activeNumberButton);
             number1k.BackgroundImage = Properties.Resources._1k_on;
             number1k.Refresh();
-            spamInput.Text = "1000";
-            activeNumberButton = number1k;
         }
 
         private void number1k_MouseUp(object sender, MouseEventArgs e)
         {
-            
+            number1k.BackgroundImage = Properties.Resources._1k_off;
+            number1k.Refresh();
+            spamInput.Text = (int.Parse(spamInput.Text) + 1000).ToString();
         }
         private void number10k_MouseDown(object sender, MouseEventArgs e)
         {
-            turnOffButtons(activeNumberButton);
             number10k.BackgroundImage = Properties.Resources._10k_on;
             number10k.Refresh();
-            spamInput.Text = "10000";
-            activeNumberButton = number10k;
         }
 
         private void number10k_MouseUp(object sender, MouseEventArgs e)
         {
-            
+            number10k.BackgroundImage = Properties.Resources._10k_off;
+            number10k.Refresh();
+            spamInput.Text = (int.Parse(spamInput.Text) + 10000).ToString();
         }
         private void number100k_MouseDown(object sender, MouseEventArgs e)
         {
-            turnOffButtons(activeNumberButton);
             number100k.BackgroundImage = Properties.Resources._100k_on;
             number100k.Refresh();
-            spamInput.Text = "100000";
-            activeNumberButton = number100k;
         }
 
         private void number100k_MouseUp(object sender, MouseEventArgs e)
         {
-            
+            number100k.BackgroundImage = Properties.Resources._100k_off;
+            number100k.Refresh();
+            spamInput.Text = (int.Parse(spamInput.Text) + 100000).ToString();
         }
         private void number500k_MouseDown(object sender, MouseEventArgs e)
         {
-            turnOffButtons(activeNumberButton);
             number500k.BackgroundImage = Properties.Resources._500k_on;
             number500k.Refresh();
-            spamInput.Text = "500000";
-            activeNumberButton = number500k;
         }
 
         private void number500k_MouseUp(object sender, MouseEventArgs e)
         {
-            
+            number500k.BackgroundImage = Properties.Resources._500k_off;
+            number500k.Refresh();
+            spamInput.Text = (int.Parse(spamInput.Text) + 500000).ToString();
         }
 
-        private void turnOffButtons(Button activeButton)
-        {
-            if (activeButton != null)
-            {
-                if (activeButton.Name == "number10")
-                {
-                    activeButton.BackgroundImage = Properties.Resources._10_off;
-                }
-                else if (activeButton.Name == "number100")
-                {
-                    activeButton.BackgroundImage = Properties.Resources._100_off;
-                }
-                else if (activeButton.Name == "number1k")
-                {
-                    activeButton.BackgroundImage = Properties.Resources._1k_off;
-                }
-                else if (activeButton.Name == "number10k")
-                {
-                    activeButton.BackgroundImage = Properties.Resources._10k_off;
-                }
-                else if (activeButton.Name == "number100k")
-                {
-                    activeButton.BackgroundImage = Properties.Resources._100k_off;
-                }
-                else if (activeButton.Name == "number500k")
-                {
-                    activeButton.BackgroundImage = Properties.Resources._500k_off;
-                }
-                activeButton.Refresh();
-            }         
-        }
+        
         #endregion
 
         #region NUMERIC_INPUT
@@ -551,6 +512,12 @@ namespace Whatspam
                 e.Handled = true;
             }
         }
+        //Clear button
+        private void button1_Click(object sender, EventArgs e)
+        {
+            spamInput.Text = "0";
+        }
+
         #endregion
 
 
@@ -607,5 +574,7 @@ namespace Whatspam
         {
 
         }
+
+        
     }
 }
