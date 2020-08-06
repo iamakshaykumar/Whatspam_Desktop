@@ -158,8 +158,16 @@ namespace Whatspam
             try
             {
                 //Retrieves the target from recent chats and starts the spamming process
-                contact = driver.FindElement(By.XPath($"//span[@class='_3ko75 _5h6Y_ _3Whw5' and contains(@title, '{targetName}')]"));
-                contact.Click();
+
+                try
+                {
+                    contact = driver.FindElement(By.XPath($"//span[@class='_3ko75 _5h6Y_ _3Whw5' and @title='{targetName}']"));
+                }
+                catch
+                {
+                    contact = driver.FindElement(By.XPath($"//span[@class='_3ko75 _5h6Y_ _3Whw5' and contains(@title, '{targetName}')]"));
+                }
+               
                 SpamTarget(contact, spamNum);
             }
             catch (NoSuchElementException)
@@ -172,7 +180,15 @@ namespace Whatspam
                 {
                     try
                     {
-                        contact = driver.FindElement(By.XPath($"//span[@class='_3ko75 _5h6Y_ _3Whw5' and contains(@title, '{targetName}')]"));
+                        try
+                        {
+                            contact = driver.FindElement(By.XPath($"//span[@class='_3ko75 _5h6Y_ _3Whw5' and @title='{targetName}']"));
+                        }
+                        catch
+                        {
+                            contact = driver.FindElement(By.XPath($"//span[@class='_3ko75 _5h6Y_ _3Whw5' and contains(@title, '{targetName}')]"));
+                        }
+                        
                         SpamTarget(contact, spamNum);
                     }
                     catch (NoSuchElementException)
@@ -409,7 +425,6 @@ namespace Whatspam
             confirmButton.BackgroundImage = Properties.Resources.Bottone_spento_normale;
             confirmButton.Refresh();
         }
-
 
         #endregion
 
