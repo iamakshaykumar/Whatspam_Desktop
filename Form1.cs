@@ -109,7 +109,6 @@ namespace Whatspam
 
             if (!browserOpen)
             {
-                
                 //Tries to open Google Chrome with chromedriver
                 if (OpenChrome())
                 {
@@ -135,7 +134,7 @@ namespace Whatspam
             {
                 try
                 {
-                    driver.FindElement(By.XPath($"//div[@class='_1qDvT _3R02z']"));
+                    driver.FindElement(By.XPath($"//div[@class='_3LX7r']"));
                     break;
                 }
                 catch (NoSuchElementException)
@@ -153,7 +152,9 @@ namespace Whatspam
 
             restTime.Stop();
 
-            searchBar = driver.FindElement(By.XPath("//div[@class='_3FRCZ copyable-text selectable-text' and @data-tab='3']"));
+
+            //Gets the search bar
+            searchBar = driver.FindElement(By.XPath("//div[@class='_2_1wd copyable-text selectable-text' and @data-tab='3']"));
 
             try
             {
@@ -161,11 +162,11 @@ namespace Whatspam
 
                 try
                 {
-                    contact = driver.FindElement(By.XPath($"//span[@class='_3ko75 _5h6Y_ _3Whw5' and @title='{targetName}']"));
+                    contact = driver.FindElement(By.XPath($"//span[@class='_35k-1 _1adfa _3-8er' and @title='{targetName}']"));
                 }
                 catch
                 {
-                    contact = driver.FindElement(By.XPath($"//span[@class='_3ko75 _5h6Y_ _3Whw5' and contains(@title, '{targetName}')]"));
+                    contact = driver.FindElement(By.XPath($"//span[@class='_35k-1 _1adfa _3-8er' and contains(@title, '{targetName}')]"));
                 }
                
                 SpamTarget(contact, spamNum);
@@ -182,11 +183,11 @@ namespace Whatspam
                     {
                         try
                         {
-                            contact = driver.FindElement(By.XPath($"//span[@class='_3ko75 _5h6Y_ _3Whw5' and @title='{targetName}']"));
+                            contact = driver.FindElement(By.XPath($"//span[@class='_35k-1 _1adfa _3-8er' and @title='{targetName}']"));
                         }
                         catch
                         {
-                            contact = driver.FindElement(By.XPath($"//span[@class='_3ko75 _5h6Y_ _3Whw5' and contains(@title, '{targetName}')]"));
+                            contact = driver.FindElement(By.XPath($"//span[@class='_35k-1 _1adfa _3-8er' and contains(@title, '{targetName}')]"));
                         }
                         
                         SpamTarget(contact, spamNum);
@@ -198,7 +199,7 @@ namespace Whatspam
                         {
                             try
                             {
-                                driver.FindElement(By.XPath($"//span[@class='_3ko75 _5h6Y_ _3Whw5' and contains(@title, '{targetName}')]"));
+                                driver.FindElement(By.XPath($"//span[@class='_35k-1 _1adfa _3-8er' and contains(@title, '{targetName}')]"));
                                 break;
                             }
                             catch (NoSuchElementException)
@@ -212,7 +213,7 @@ namespace Whatspam
 
                         restTime.Stop();
 
-                        contact = driver.FindElement(By.XPath($"//span[@class='_3ko75 _5h6Y_ _3Whw5' and contains(@title, '{targetName}')]"));
+                        contact = driver.FindElement(By.XPath($"//span[@class='_35k-1 _1adfa _3-8er' and contains(@title, '{targetName}')]"));
 
                         SpamTarget(contact, spamNum);
                     }
@@ -242,7 +243,7 @@ namespace Whatspam
             //Opens the chat of the given target
             contact.Click();
             //Locates the message input space
-            IWebElement textField = driver.FindElement(By.XPath("//div[@class='_3FRCZ copyable-text selectable-text' and @data-tab='1']"));
+            IWebElement textField = driver.FindElement(By.XPath("//div[@class='_2_1wd copyable-text selectable-text' and @data-tab='6']"));
             //Saves the message and the number of messages to be sent from user input
             message = messageInput.Text;
 
@@ -541,25 +542,27 @@ namespace Whatspam
             string[] drivers;
             //Getting all the drivers names from the drivers directory
             drivers = Directory.GetFiles($"{Directory.GetCurrentDirectory()}\\Drivers\\Chrome");
+            
             //Trying to match each of the existing drivers to the current version of Google Chrome
             foreach (string d in drivers)
             {
-                driverService = ChromeDriverService.CreateDefaultService($"{Directory.GetCurrentDirectory()}\\Drivers\\Chrome", Path.GetFileName(d));
-
-                //Prevents the Dev Tools command prompt from being displayed
-                driverService.HideCommandPromptWindow = true;
-           
-                //Assigns the chromedriver
                 try
                 {
+                    driverService = ChromeDriverService.CreateDefaultService($"{Directory.GetCurrentDirectory()}\\Drivers\\Chrome", Path.GetFileName(d));
+
+                    //Prevents the Dev Tools command prompt from being displayed
+                    driverService.HideCommandPromptWindow = true;
+
+                    //Assigns the chromedriver
                     driver = new ChromeDriver(driverService);
                     //Sets the bool value to true
                     browserOpen = true;
                     return true;
                 }
-                catch
+                catch (Exception e)
                 {
-                    
+                    Console.WriteLine("ERROR 0");
+                    Console.WriteLine(e.Message);
                 }          
             }
             return false;
@@ -567,7 +570,7 @@ namespace Whatspam
         //Have to implement Firefox browser
         private bool OpenFirefox()
         {
-            return true;
+            return false;
         }
 
         private void RoundCorners(Control obj)
